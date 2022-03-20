@@ -7,13 +7,27 @@ app=Flask(__name__)
 def home():
     return render_template('index.html')
 
+@app.route('/index.html')
+def Index():
+    return render_template('index.html')
+
 @app.route('/project.html')
 def project():
     return render_template('project.html')
 
+@app.route('/Projects.html')
+def Projects():
+    return render_template('Projects.html')
+
 @app.route('/contact.html')
 def contact():
     return render_template('contact.html')
+
+'''
+@app.route('/components.html')
+def components():
+    return render_template('components.html')
+'''
 
 #save data in txt
 def extract(data):
